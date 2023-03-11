@@ -1,0 +1,25 @@
+@use "../utils/" as u;
+
+.header {
+  padding-inline: u.rem(16);
+  padding-block-start: u.rem(32);
+  background-color: var(--dark-purple);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include u.breakpoint(large) {
+    padding-inline: u.rem(40);
+  }
+
+  @include u.breakpoint(xlarge) {
+    padding-inline: u.rem(165);
+    padding-block-start: u.rem(58);
+  }
+
+  &__link {
+    color: var(--white);
+    border-bottom: 3px solid var(--eucaplyptus);
+    padding-block-end: 2px;
+  }
+}
