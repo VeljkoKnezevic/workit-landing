@@ -21,15 +21,16 @@ h3,
 h4 {
   margin: 0;
   font-weight: 600;
-  font-family: "Fraunces", serif;
 }
 
 h1 {
+  font-family: "Fraunces 144pt S000", sans-serif;
   font-size: clamp(3.125rem, 0.0625rem + 7.6vw, 5rem);
   line-height: clamp(3.125rem, 0.0625rem + 7.6vw, 5rem);
 }
 
 h2 {
+  font-family: "Fraunces 144pt S000", sans-serif;
   font-size: 1.75rem;
   line-height: 2.25rem;
 }
@@ -41,6 +42,7 @@ h2 {
 }
 
 h3 {
+  font-family: "Fraunces 144pt S000", sans-serif;
   font-size: clamp(2rem, 0.0625rem + 6.1vw, 3.5rem);
   line-height: clamp(3rem, 0.0625rem + 6.1vw, 4rem);
 }
@@ -107,6 +109,44 @@ a:active {
   color: var(--white);
   border-bottom: 3px solid var(--eucaplyptus);
   padding-block-end: 2px;
+}
+
+.hero {
+  padding-block-start: 4rem;
+  padding-inline: 1rem;
+  background-color: var(--dark-purple);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-end-start-radius: 50% 15px;
+  border-end-end-radius: 50% 15px;
+}
+.hero__heading {
+  color: var(--white);
+  text-align: center;
+}
+.hero__heading--underline {
+  border-bottom: 3px solid var(--eucaplyptus);
+}
+.hero__button {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -0.16px;
+  color: var(--dark-purple);
+  background-color: var(--eucaplyptus);
+  border: none;
+  padding: 0.6875rem 1.5rem 0.75rem 1.4375rem;
+  margin-block-start: 2.5rem;
+}
+.hero__image {
+  display: block;
+  width: 20rem;
+  margin-block-start: 4rem;
+  margin-block-end: -4rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
