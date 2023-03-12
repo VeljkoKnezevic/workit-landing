@@ -3,7 +3,7 @@
 .cards {
   background-color: var(--ghost-white);
   //Padding in figma + mbst
-  padding-block-start: u.rem(245);
+  padding-block-start: u.rem(300);
   margin-block-start: u.rem(-90);
   padding-inline: u.rem(16);
   padding-block-end: u.rem(72);
@@ -58,6 +58,12 @@
       padding: u.rem(4) u.rem(18);
       border: 1px solid var(--davys-grey);
       border-radius: u.rem(30.5);
+
+      @include u.breakpoint(large) {
+        font-size: u.rem(24);
+        line-height: u.rem(40);
+        padding: u.rem(7) u.rem(22.5);
+      }
     }
 
     &__heading {
@@ -67,6 +73,9 @@
       @include u.breakpoint(medium) {
         margin-block-start: 0;
       }
+      @include u.breakpoint(large) {
+        margin-block-start: u.rem(56);
+      }
     }
 
     &__para {
@@ -75,6 +84,7 @@
 
       @include u.breakpoint(large) {
         max-width: u.rem(354);
+        margin-block-start: u.rem(28);
       }
     }
   }
