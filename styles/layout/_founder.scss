@@ -1,1 +1,112 @@
 @use "../utils/" as u;
+
+.founder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: u.rem(100);
+
+  &__image {
+    display: block;
+    width: u.rem(281);
+
+    @include u.breakpoint(medium) {
+      align-self: flex-start;
+      margin-inline-start: u.rem(39);
+    }
+
+    @include u.breakpoint(xlarge) {
+      width: u.rem(477);
+      align-self: flex-start;
+      margin-inline-start: u.rem(163);
+    }
+  }
+
+  &__content {
+    margin-inline: u.rem(16);
+    background-color: var(--dark-purple);
+    text-align: center;
+    padding: u.rem(32) u.rem(31);
+    margin-block-start: u.rem(-53);
+    position: relative;
+
+    @include u.breakpoint(medium) {
+      align-self: flex-end;
+      margin-inline: 0;
+      margin-inline-start: u.rem(214);
+      margin-inline-end: u.rem(40);
+      margin-block-start: u.rem(-130);
+      text-align: start;
+      padding: u.rem(48) u.rem(56) u.rem(56);
+    }
+
+    @include u.breakpoint(xlarge) {
+      margin-inline-start: u.rem(545);
+      margin-inline-end: u.rem(165);
+      margin-block-start: u.rem(-304);
+      padding: u.rem(64);
+      max-width: 1100px;
+    }
+  }
+
+  &__background-image {
+    display: none;
+
+    @include u.breakpoint(medium) {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: u.rem(-105);
+    }
+
+    @include u.breakpoint(xlarge) {
+      right: u.rem(72);
+      bottom: u.rem(-61);
+    }
+  }
+
+  &__heading {
+    color: var(--white);
+  }
+
+  &__para {
+    color: var(--white);
+    margin-block-start: u.rem(16);
+
+    @include u.breakpoint(medium) {
+      margin-block-start: u.rem(24);
+    }
+
+    @include u.breakpoint(xlarge) {
+      margin-block-start: u.rem(32);
+    }
+  }
+
+  &__button {
+    margin-block-start: u.rem(24);
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: u.rem(16);
+    line-height: u.rem(32);
+    letter-spacing: -0.16px;
+    color: var(--dark-purple);
+    padding: u.rem(8) u.rem(22.5) u.rem(11);
+    background-color: var(--eucaplyptus);
+    border: 2px solid var(--eucaplyptus);
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--dark-purple);
+      color: var(--eucaplyptus);
+    }
+
+    @include u.breakpoint(xlarge) {
+      font-size: u.rem(18);
+      line-height: u.rem(32);
+      letter-spacing: -0.18px;
+      margin-block-start: u.rem(32);
+      padding: u.rem(11.5) u.rem(23.5) u.rem(13.5) u.rem(23.5);
+    }
+  }
+}
