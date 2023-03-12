@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include u.breakpoint(large) {
+  @include u.breakpoint(medium) {
     padding-inline: u.rem(40);
   }
 
@@ -21,5 +21,9 @@
     color: var(--white);
     border-bottom: 3px solid var(--eucaplyptus);
     padding-block-end: 2px;
+
+    &:hover {
+      color: var(--eucaplyptus);
+    }
   }
 }

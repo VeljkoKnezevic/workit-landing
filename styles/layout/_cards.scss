@@ -1,1 +1,81 @@
 @use "../utils/" as u;
+
+.cards {
+  background-color: var(--ghost-white);
+  //Padding in figma + mbst
+  padding-block-start: u.rem(245);
+  margin-block-start: u.rem(-90);
+  padding-inline: u.rem(16);
+  padding-block-end: u.rem(72);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: u.rem(40);
+  border-end-start-radius: 50% 15px;
+  border-end-end-radius: 50% 15px;
+  justify-content: center;
+
+  @include u.breakpoint(medium) {
+    gap: u.rem(48);
+    padding-inline: u.rem(91);
+    margin-block-start: u.rem(-140);
+    padding-block-start: u.rem(343);
+  }
+
+  @include u.breakpoint(large) {
+    flex-direction: row;
+    gap: u.rem(48);
+    padding-inline: u.rem(91);
+    margin-block-start: u.rem(-170);
+    padding-block-start: u.rem(425);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include u.breakpoint(medium) {
+      flex-direction: row;
+      text-align: start;
+      gap: u.rem(32);
+    }
+
+    @include u.breakpoint(large) {
+      flex-direction: column;
+      text-align: center;
+      gap: u.rem(26);
+    }
+
+    &__number {
+      font-family: "Fraunces 144pt S000";
+      font-weight: 600;
+      font-size: u.rem(20);
+      line-height: u.rem(36);
+      text-align: center;
+      color: var(--dark-purple);
+      padding: u.rem(4) u.rem(18);
+      border: 1px solid var(--davys-grey);
+      border-radius: u.rem(30.5);
+    }
+
+    &__heading {
+      color: var(--dark-purple);
+      margin-block-start: u.rem(24);
+
+      @include u.breakpoint(medium) {
+        margin-block-start: 0;
+      }
+    }
+
+    &__para {
+      color: var(--davys-grey);
+      margin-block-start: u.rem(16);
+
+      @include u.breakpoint(large) {
+        max-width: u.rem(354);
+      }
+    }
+  }
+}

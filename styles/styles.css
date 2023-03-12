@@ -94,7 +94,7 @@ a:active {
   justify-content: space-between;
   align-items: center;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 43.75em) {
   .header {
     padding-inline: 2.5rem;
   }
@@ -110,6 +110,9 @@ a:active {
   border-bottom: 3px solid var(--eucaplyptus);
   padding-block-end: 2px;
 }
+.header__link:hover {
+  color: var(--eucaplyptus);
+}
 
 .hero {
   padding-block-start: 4rem;
@@ -120,10 +123,33 @@ a:active {
   align-items: center;
   border-end-start-radius: 50% 15px;
   border-end-end-radius: 50% 15px;
+  position: relative;
+}
+@media (min-width: 43.75em) {
+  .hero {
+    background-image: url(../assets/images/bg-pattern-1.svg), url(../assets/images/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: top left -237px, bottom 109px right -103px;
+  }
+}
+@media (min-width: 90em) {
+  .hero {
+    background-position: top left -148px, bottom 235px right -58px;
+  }
 }
 .hero__heading {
   color: var(--white);
   text-align: center;
+}
+@media (min-width: 43.75em) {
+  .hero__heading {
+    width: 60%;
+  }
+}
+@media (min-width: 90em) {
+  .hero__heading {
+    width: 40%;
+  }
 }
 .hero__heading--underline {
   border-bottom: 3px solid var(--eucaplyptus);
@@ -132,21 +158,128 @@ a:active {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 1rem;
+  line-height: 2rem;
   text-align: center;
   letter-spacing: -0.16px;
   color: var(--dark-purple);
   background-color: var(--eucaplyptus);
   border: none;
-  padding: 0.6875rem 1.5rem 0.75rem 1.4375rem;
+  padding: 0.5625rem 1.375rem 0.625rem 1.3125rem;
+  border: 2px solid var(--eucaplyptus);
   margin-block-start: 2.5rem;
+}
+.hero__button:hover {
+  cursor: pointer;
+  background-color: var(--dark-purple);
+  color: var(--eucaplyptus);
+}
+@media (min-width: 90em) {
+  .hero__button {
+    margin-block-start: 2.3125rem;
+    padding: 0.6875rem 1.84375rem 0.875rem 1.90625rem;
+  }
 }
 .hero__image {
   display: block;
   width: 20rem;
   margin-block-start: 4rem;
-  margin-block-end: -4rem;
+  margin-block-end: -5.75rem;
+}
+@media (min-width: 43.75em) {
+  .hero__image {
+    width: 32.125rem;
+    margin-block-start: 3.4375rem;
+    margin-block-end: -9.25rem;
+  }
+}
+@media (min-width: 90em) {
+  .hero__image {
+    width: 47.9375rem;
+    margin-block-start: 3.125rem;
+    margin-block-end: -13.75rem;
+  }
+}
+
+.cards {
+  background-color: var(--ghost-white);
+  padding-block-start: 15.3125rem;
+  margin-block-start: -5.625rem;
+  padding-inline: 1rem;
+  padding-block-end: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  border-end-start-radius: 50% 15px;
+  border-end-end-radius: 50% 15px;
+  justify-content: center;
+}
+@media (min-width: 43.75em) {
+  .cards {
+    gap: 3rem;
+    padding-inline: 5.6875rem;
+    margin-block-start: -8.75rem;
+    padding-block-start: 21.4375rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .cards {
+    flex-direction: row;
+    gap: 3rem;
+    padding-inline: 5.6875rem;
+    margin-block-start: -10.625rem;
+    padding-block-start: 26.5625rem;
+  }
+}
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 43.75em) {
+  .cards .card {
+    flex-direction: row;
+    text-align: start;
+    gap: 2rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .cards .card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.625rem;
+  }
+}
+.cards .card__number {
+  font-family: "Fraunces 144pt S000";
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  color: var(--dark-purple);
+  padding: 0.25rem 1.125rem;
+  border: 1px solid var(--davys-grey);
+  border-radius: 1.90625rem;
+}
+.cards .card__heading {
+  color: var(--dark-purple);
+  margin-block-start: 1.5rem;
+}
+@media (min-width: 43.75em) {
+  .cards .card__heading {
+    margin-block-start: 0;
+  }
+}
+.cards .card__para {
+  color: var(--davys-grey);
+  margin-block-start: 1rem;
+}
+@media (min-width: 56.25em) {
+  .cards .card__para {
+    max-width: 22.125rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
